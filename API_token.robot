@@ -86,7 +86,7 @@ Read Scope
     Click element                       ${create_token}
     Element should be disabled          ${create_token}
     Wait until page does not contain element    ${create_success}   60
-    Set browser implicit wait           15
+    Set browser implicit wait           30
 
 Delete Token
     Wait until element is visible       ${del_btn}
@@ -102,7 +102,7 @@ Trade Scope
     Click element                       ${create_token}
     Element should be disabled          ${create_token}
     Wait until page does not contain element    ${create_success}   60
-    Set browser implicit wait           15
+    Set browser implicit wait           30
 
 Copy Token
     Wait until element is visible       ${copy_icon}
@@ -116,7 +116,7 @@ Payments Scope
     Click element                       ${create_token}
     Element should be disabled          ${create_token}
     Wait until page does not contain element    ${create_success}   60
-    Set browser implicit wait           15
+    Set browser implicit wait           30
 
 Admin Scope
     Click element                       ${admin_scope}
@@ -125,7 +125,7 @@ Admin Scope
     Click element                       ${create_token}
     Element should be disabled          ${create_token}
     Wait until page does not contain element    ${create_success}   60
-    Set browser implicit wait           15
+    Set browser implicit wait           30
 
 Trading Info Scope
     Click element                       ${trading_info_scope}
@@ -134,7 +134,7 @@ Trading Info Scope
     Click element                       ${create_token}
     Element should be disabled          ${create_token}
     Wait until page does not contain element    ${create_success}   60
-    Set browser implicit wait           15
+    Set browser implicit wait           30
 
 Multi Scope
     Click element                       ${read_scope}
@@ -144,7 +144,7 @@ Multi Scope
     Click element                       ${create_token}
     Element should be disabled          ${create_token}
     Wait until page does not contain element    ${create_success}   60
-    Set browser implicit wait           15
+    Set browser implicit wait           30
 
 *** Test Cases ***
 Open Account Settings
