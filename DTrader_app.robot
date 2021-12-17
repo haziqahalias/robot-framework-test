@@ -62,6 +62,7 @@ Virtual Account
     Click element       ${demo_tab}
     Wait until element is enabled       ${demo_acc}     60
     Click element       ${demo_acc}
+    Set browser implicit wait           30
 
 Select Vol10
     Wait until page does not contain element        ${loading_icon}     300
@@ -74,6 +75,7 @@ Select Vol10
     Wait until element is enabled       ${volatility_10}        120
     Click element       ${volatility_10}
     Wait until page contains element    ${vol10_chosen}          120
+    Set browser implicit wait           30
 
 Buy Rise
     Wait until page contains element    ${Rise/Fall}
@@ -83,6 +85,7 @@ Buy Rise
     Wait until element is enabled       ${Purchase_btn}
     Click element       ${Purchase_btn}
     Wait until page contains element    ${Recent_position}      120
+    Set browser implicit wait           30
 
 Select AUD/USD
     Click element       ${market_selection}
@@ -91,6 +94,7 @@ Select AUD/USD
     Click element       ${Forex}
     Wait until element is visible       ${AUD/USD}
     Click element       ${AUD/USD}
+    Set browser implicit wait           30
 
 Change Duration
     Wait until element is enabled       ${Dur}     120
@@ -99,6 +103,7 @@ Change Duration
     Click element                ${Day_input}
     Press keys      ${Day_input}        CTRL+a+BACKSPACE
     Press keys      ${Day_input}        2
+    Set browser implicit wait           30
 
 Higher/Lower Contract
     Wait until element is visible   ${Contract_dropdown}
@@ -106,6 +111,7 @@ Higher/Lower Contract
     Click element       ${Contract_dropdown}
     Wait until element is visible   ${Higher/Lower}
     Click element       ${Higher/Lower}
+    Set browser implicit wait           30
 
 15.50 Payout
     Wait until element is visible   ${Payout_option}    120
@@ -115,11 +121,13 @@ Higher/Lower Contract
     Click element       ${Payout_input}
     Press keys      ${Payout_input}      CTRL+a+BACKSPACE
     Press keys      ${Payout_input}      1+5+.+5+0
+    Set browser implicit wait           30
 
 Buy Lower
-    Wait until element is visible   ${Buy_fall}
-    Wait until element is enabled   ${Buy_fall}
+    Wait until element is visible   ${Buy_fall}     60
+    Wait until element is enabled   ${Buy_fall}     60
     Click element   ${Buy_fall}
+    Set browser implicit wait           30
 
 Change Barrier
     Wait until element is visible   ${Barrier_input}
@@ -129,6 +137,7 @@ Change Barrier
     Press keys      ${Barrier_input}        SHIFT+=
     Press keys      ${Barrier_input}        0+.+1
     Wait until element is visible   ${Barrier_error}
+    Set browser implicit wait           30
 
 10 Payout
     Wait until element is visible   ${Payout_option}    120
@@ -138,6 +147,7 @@ Change Barrier
     Click element       ${Payout_input}
     Press keys      ${Payout_input}      CTRL+a+BACKSPACE
     Press keys      ${Payout_input}      1+0
+    Set browser implicit wait           30
 
 Select Vol50
     Wait until page does not contain element        ${loading_icon}     300
@@ -150,6 +160,7 @@ Select Vol50
     Wait until element is enabled       ${volatility_50}        120
     Click element       ${volatility_50}
     Wait until page contains element    ${vol50_chosen}          120
+    Set browser implicit wait           30
 
 Multiplier Contract
     Wait until element is visible   ${Contract_dropdown}
@@ -159,15 +170,17 @@ Multiplier Contract
     Wait until element is enabled   ${Multiplier}       120
     Click element       ${Multiplier}
     Wait until page does not contain element        ${Payout_option}    120
+    Set browser implicit wait           30
 
-Take Proft/Stop Loss
+Take Profit/Stop Loss
     Wait until element is visible       ${Take_profit}      120
     Wait until element is enabled       ${Take_profit}      120
-    Select checkbox                     ${Take_profit}
-    Select checkbox                     ${Stop_loss}
+    Click element                       ${Take_profit}
+    Click element                       ${Stop_loss}
     Checkbox should be selected         ${Take_profit}
     Checkbox should be selected         ${Stop_loss}
     Checkbox should not be selected     ${Deal_cancellation}
+    Set browser implicit wait           30
 
 
 
@@ -200,5 +213,5 @@ Multiplier Testing
     Then Multiplier Contract
 
 Take/Stop Checkbox
-    Take Proft/Stop Loss
+    Take Profit/Stop Loss
 
